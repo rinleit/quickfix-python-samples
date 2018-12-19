@@ -1,6 +1,6 @@
 # QUICKFIX SAMPLE FOR PYTHON #
 Established connection by [FIX protocol](https://www.fixtrading.org/standards/)  
-*Author:* Rin Le.
+*Author:* Rin Le.  
 *Details:* [Configuration](http://www.quickfixengine.org/quickfix/doc/html/configuration.html)
 
 ## Requirement
