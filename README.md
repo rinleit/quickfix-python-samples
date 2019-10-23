@@ -1,20 +1,25 @@
 # QUICKFIX EXAMPLE FOR PYTHON #
 Established connection by [FIX protocol](https://www.fixtrading.org/standards/)  
 *Author:* Rin Le <rinle.it@gmail.com>.  
-*Details:* [Configuration](http://www.quickfixengine.org/quickfix/doc/html/configuration.html)
+*Details:* [Configuration](http://www.quickfixengine.org/quickfix/doc/html/configuration.html)  
 
-## Requirement
+## Requirements
 * Python 3.x
-* [quickfix 1.15.1](www.quickfixengine.org/)
+* [QuickFIX Engine](www.quickfixengine.org/)
 
-## Server
+## Installing Requirements
+```
+pip install -r requirements.txt
+```
+
+## Start Project 
+### Server
 ```
 cd ./acceptor
 python server.py server.cfg
 ```
-## Client
+### Client
 ```
 cd ./initiator
 python client.py client.cfg
 ```
-

@@ -54,7 +54,7 @@ class Application(fix.Application):
         return
     
 
-    def onMessage(message, sessionID):
+    def onMessage(self, message, sessionID):
         '''Processing application message'''
         pass
 
