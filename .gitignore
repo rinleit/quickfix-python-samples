@@ -1,0 +1,13 @@
+*.cpython-37.pyc
+*.pyc
+*.log
+/acceptor/Logs/FIX.4.3-TESTACC-TESTINI.event.current.log
+/acceptor/Logs/FIX.4.3-TESTACC-TESTINI.messages.current.log
+/acceptor/Logs/GLOBAL.event.current.log
+/acceptor/Sessions/FIX.4.3-TESTACC-TESTINI.session
+/initiator/Logs/FIX.4.3-TESTINI-TESTACC.event.current.log
+/initiator/Logs/FIX.4.3-TESTINI-TESTACC.messages.current.log
+/initiator/Sessions/FIX.4.3-TESTINI-TESTACC.body
+/initiator/Sessions/FIX.4.3-TESTINI-TESTACC.header
+/initiator/Sessions/FIX.4.3-TESTINI-TESTACC.seqnums
+/initiator/Sessions/FIX.4.3-TESTINI-TESTACC.session

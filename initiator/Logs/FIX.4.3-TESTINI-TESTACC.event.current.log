@@ -1,5 +1,0 @@
-20181219-17:36:10.328655000 : Created session
-20181219-17:36:10.329341000 : Connecting to 127.0.0.1 on port 8282 (Source :0)
-20181219-17:36:10.333554000 : Initiated logon request
-20181219-17:36:10.338487000 : Logon contains ResetSeqNumFlag=Y, reseting sequence numbers to 1
-20181219-17:36:10.338809000 : Received logon response

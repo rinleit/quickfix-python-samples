@@ -1,7 +1,0 @@
-20181219-17:32:48.513289000 : Created session
-20181219-17:33:31.604778000 : Created session
-20181219-17:36:10.333706000 : Logon contains ResetSeqNumFlag=Y, reseting sequence numbers to 1
-20181219-17:36:10.337703000 : Received logon request
-20181219-17:36:10.338357000 : Responding to logon request
-20181219-17:47:20.493116000 : Socket Error: Connection reset by peer.
-20181219-17:47:20.493323000 : Disconnecting
