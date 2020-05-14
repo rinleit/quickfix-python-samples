@@ -2,9 +2,6 @@
 *.pyc
 *.log
 /acceptor/Logs/*
+/acceptor/Sessions/*
+/initiator/Logs/*
 /initiator/Sessions/*
-.body
-.header
-.seqnums
-.session
-*.4.3-TESTACC-TESTINI.session

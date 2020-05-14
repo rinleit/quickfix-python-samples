@@ -1,6 +1,4 @@
-import Field
-# import FIX42
-
+from model import Field
 
 class Types(object):
     Logon = 'A'

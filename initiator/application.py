@@ -8,13 +8,11 @@ import time
 import logging
 from model.logger import setup_logger
 from model import Field
-
-# configured
-__SOH__ = chr(1)
+from model.Message import __SOH__
 
 # Logger
-setup_logger('FIX', 'Logs/message.log')
-logfix = logging.getLogger('FIX')
+setup_logger('logfix', 'Logs/message.log')
+logfix = logging.getLogger('logfix')
 
 
 class Application(fix.Application):
@@ -31,25 +29,25 @@ class Application(fix.Application):
 
     def toAdmin(self, message, sessionID):
         msg = message.toString().replace(__SOH__, "|")
-        logfix.info("S >> (%s)" % msg)
+        logfix.info("S >> %s" % msg)
         return
     def fromAdmin(self, message, sessionID):
         msg = message.toString().replace(__SOH__, "|")
-        logfix.info("R >> (%s)" % msg)
+        logfix.info("R << %s" % msg)
         return
     def toApp(self, message, sessionID):
         msg = message.toString().replace(__SOH__, "|")
-        logfix.info("S >> (%s)" % msg)
+        logfix.info("S >> %s" % msg)
         return
     def fromApp(self, message, sessionID):
         msg = message.toString().replace(__SOH__, "|")
-        logfix.info("R >> (%s)" % msg)
+        logfix.info("R << %s" % msg)
         self.onMessage(message, sessionID)
         return
 
    
     def onMessage(self, message, sessionID):
-        """on Message"""
+        """Processing application message here"""
         pass
 
     def run(self):

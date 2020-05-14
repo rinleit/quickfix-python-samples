@@ -1,5 +1,4 @@
 from model import Field
-# import FIX42
 
 class Types(object):
     Logon = 'A'
@@ -37,10 +36,6 @@ def make_pair(pair):
 class Base(object):
     default_session = None
     current_session = None
-    # msg_type = None
-    # fields = []
-    # length = None
-    # string = None
 
     def __init__(self, fields=None, session=None):
         self.msg_type = None
@@ -55,8 +50,8 @@ class Base(object):
         self.length = None
         self.string = None
 
-        # if not session and not self.default_session:
-        #     raise RuntimeError('Session must be provided if default session is not set')
+        if not session and not self.default_session:
+            raise RuntimeError('Session must be provided if default session is not set')
 
         if not session:
             self.current_session = self.default_session
@@ -116,72 +111,3 @@ class Base(object):
                     result.set_field((values[0], values[1]))
         result.string = string
         return result
-
-
-class SanGiaoDich:
-    HOSE = '01'
-    HNX = '03'
-    UPCOM = '05'
-
-class ErrorCodeIs:
-    Reject = '0000'
-    NotSupportOrdType = '0001'
-    NotSupportTimeInForce= '0002'
-    SymbolNotExist = '0003'
-    TimeInForce_DAY = 'DAY'
-    TimeInForce_GTC = 'GTC'
-    TimeInForce_OPG = 'OPG'
-    TimeInForce_IOC = 'IOC'
-    TimeInForce_FOK = 'FOK'
-    TimeInForce_GTX = 'GTX'
-    TimeInForce_GTD = 'GTD'
-
-class TimeInForceIs:
-    DAY = '0'
-    GTC = '1' # Good Till Cancel 
-    OPG = '2' # At the Opening
-    IOC = '3' # Immediate or Cance
-    FOK = '4' # Fill or Kill
-    GTX = '5' # Good Till Crossing
-    GTD = '6' # Good Till Date
-
-class OrdTypeALT:
-    LO = '01'
-    MP = '02'
-    ATO = '03'
-    ATC = '04'
-    MOK = '06'
-    MAK = '07'
-    MTL = '08'
-
-    @staticmethod
-    def getOrdType(code=None, SanGD=None, atc=False):
-        if SanGD == SanGiaoDich.HNX:
-            if atc == True: # Phien cuoi ngay
-                return OrdTypeALT.ATC
-            if code == TimeInForceIs.DAY: # Phien lien tuc
-                return OrdTypeALT.MAK
-            if code == TimeInForceIs.FOK: # Khop het hoac Canceled
-                return OrdTypeALT.MOK
-            if code == TimeInForceIs.IOC: # Khop het, khop mot phan hoac Canceled phan con lai
-                return OrdTypeALT.MAK
-            if code == TimeInForceIs.OPG:
-                return OrdTypeALT.ATC
-            if code == None:
-                return OrdTypeALT.MAK
-            return None
-        elif SanGD == SanGiaoDich.HOSE:
-            if atc == True:
-                return OrdTypeALT.ATC # Phien cuoi ngay
-            if code == TimeInForceIs.OPG:
-                return OrdTypeALT.ATC # Phien dau ngay
-            return None
-        elif SanGD == SanGiaoDich.UPCOM:
-            return None
-
-class OrdTypeBLP:
-    Market = '1'
-    Limit = '2'
-    MarketOnClose = '5'
-    LimitOnClose = 'B'
-
