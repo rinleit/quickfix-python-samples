@@ -1,6 +1,8 @@
 *.cpython-37.pyc
 *.pyc
 *.log
+.vscode
+__pycache__
 /acceptor/Logs/*
 /acceptor/Sessions/*
 /initiator/Logs/*

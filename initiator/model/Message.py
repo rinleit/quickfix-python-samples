@@ -11,7 +11,7 @@ class Types(object):
     MarketDataRequest = 'V'
     MarketDataSnapshot = 'W'
     MarketDataRefresh = 'X'
-    NewOrder = 'D'
+    NewOrderSingle = 'D'
     ListOrder = 'E'
     OrderCancel = 'F'
     OrderCancelReplace = 'G'
