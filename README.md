@@ -14,15 +14,18 @@ pip install -r requirements.txt
 
 ## Run Project
 ### With Docker
+
+Please edit file initiator/client.cfg: Tag SocketConnectHost=acceptor
+
 ```sh
 cd ./docker
 docker-compose up --build
 ```
 
 ### Without Docker
-```sh
-Please modify file path in initiator/client.cfg from SocketConnectHost=acceptor to SocketConnectHost=127.0.0.1
-```
+
+Please edit file initiator/client.cfg: Tag SocketConnectHost=127.0.0.1
+
 ```sh
 cd ./acceptor
 python server.py server.cfg
