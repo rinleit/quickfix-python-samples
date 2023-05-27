@@ -25,11 +25,15 @@ docker-compose up --build
 ### Without Docker
 
 Please edit file initiator/client.cfg: Tag SocketConnectHost=127.0.0.1
+*You must launch the server side first, then launch the client side for the quickfix to establish a standard FIX protocol connection.*
 
+#### Run Server
 ```sh
 cd ./acceptor
 python server.py server.cfg
 ```
+
+#### Run Client
 ```sh
 cd ./initiator
 python client.py client.cfg
