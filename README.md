@@ -1,7 +1,7 @@
 # QuickFIX Python Samples #
-* *Established connection by* [FIX protocol](https://www.fixtrading.org/standards/)  
-* *Author:* Rin Le <rinle.it [a] gmail.com>.  
-* *Details:* [Configuration for quickfix](http://www.quickfixengine.org/quickfix/doc/html/configuration.html)  
+* Established connection by [FIX protocol](https://www.fixtrading.org/standards/)  
+* Author: Rin Le <rinle.it [a] gmail.com>.  
+* Details: [Configuration for quickfix](https://www.quickfixj.org/usermanual/2.3.0/usage/configuration.html)  
 
 ## Requirements
 * Python 3.x
